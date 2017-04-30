@@ -76,7 +76,7 @@ $(document).ready(function() {
 			if (carInput === 0 || carInput === "undefined") {
 				carScore = 0;
 			} else {
-				carScore = carInput * 0.79;
+				carScore = (carInput/0.621371) * 0.79;
 			}
 			// console.log("Car score is: " + carScore);
 		
