@@ -98,12 +98,6 @@ $(document).ready(function() {
 			var energyScore = electricScore + gasScore + oilScore;
 			var travelScore = carScore	+ flights4LessScore + flights4MoreScore;
 			var wasteScore = newspaperScore + alumTinScore;
-			var test=function(){
-  	 			var textMultiple = {
-        			energySource,
-    				};
-   				return textMultiple;
-				}
 
 			// calculate total score and round to nearest whole integer
 			totalScore = Math.round(energyScore + travelScore + wasteScore);
