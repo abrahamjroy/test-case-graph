@@ -22,4 +22,3 @@ the units have been adjusted to suit India's Metric units, and most of the code 
 
 
 
-The base of this code is forked from Kathy Lovan's Carbon Footprint Calculator, suitably made for Imperial units, Big Thanks
