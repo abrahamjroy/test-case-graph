@@ -17,6 +17,36 @@ $(document).ready(function() {
 			window.scrollTo(0, 400);
 			// hide form template if all inputs are completed
 			$("#form").hide();
+			var  chart =  new  CanvasJS.Chart("container",
+{
+  .
+  .
+  .
+  data:[ 
+  {// dataSeries 1
+   type: "column",
+   dataPoints:[ //array of dataPoint
+    {x:1, y:5}, //dataPoint
+    {x:2, y:6}, //dataPoint
+    {x:3, y:7} //dataPoint
+   ]
+  },
+ 
+  {// dataSeries 2 
+   type: "line",
+   dataPoints:[
+    {x:1, y:8}, //dataPoint
+    {x:2, y:9}, //dataPoint
+    {x:3, y:4} //dataPoint
+   ]
+  },
+.
+ 
+],
+.
+. 
+});
+chart.render();
 
 			// get input values
 			var electricInput = document.getElementById("electric").value;
@@ -98,7 +128,11 @@ $(document).ready(function() {
 			var energyScore = electricScore + gasScore + oilScore;
 			var travelScore = carScore	+ flights4LessScore + flights4MoreScore;
 			var wasteScore = newspaperScore + alumTinScore;
-
+dataPoints : [ 
+   { x: 10, y: energyScore, label: "energyScore"  }, //dataPoint
+   { x: 20, y: travelScore,  label: "travelScore"  }, 
+   { x: 30, y: wasteScore, label: "wasteScore" },
+],
 			// calculate total score and round to nearest whole integer
 			totalScore = Math.round(energyScore + travelScore + wasteScore);
 			var formattedScore = totalScore.toLocaleString("en");
