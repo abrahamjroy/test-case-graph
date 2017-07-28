@@ -128,14 +128,14 @@
 
   function drawMouseoverVisualization() {
     var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Year');
+    data.addColumn('string', 'TYPE');
     data.addColumn('number', 'Score');
     data.addRows([
-      ['2005',3.6],
-      ['2006',4.1],
-      ['2007',3.8],
-      ['2008',3.9],
-      ['2009',4.6]
+      ['Electricity',3.6],
+      ['Oli',4.1],
+      ['Fuel',3.8],
+      ['Travel(Car)',3.9],
+      ['Travel(Flights)',4.6]
     ]);
 
     barsVisualization = new google.visualization.ColumnChart(document.getElementById('mouseoverdiv'));
