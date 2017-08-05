@@ -103,7 +103,24 @@ $(document).ready(function() {
 			totalScore = Math.round(energyScore + travelScore + wasteScore);
 			var formattedScore = totalScore.toLocaleString("en");
 			// console.log(totalScore);
+//graph display
+//graph display
+function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Scores', 'Core Activities'],
+          ['Energy Score',     energyScore],
+          ['Travel Score',      travelScore],
+          ['Recycle Score',  wasteScore]
+        ]);
 
+        var options = {
+          title: 'My Daily Activities',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
 			document.getElementById("score").innerHTML = formattedScore;
 
 			// display results
